@@ -1,5 +1,6 @@
 // app.post('/users/add', )
-const { response } = require("express");
+
+// const { response } = require("express");
 const {addNewUser,readNewUser,updateNewUser,deleteNewUser} = require("./service");
 
 // Create User
@@ -33,7 +34,7 @@ module.exports.readUser = (req, res) => {
 
 module.exports.updateUser = (req, res) => {
   updateNewUser(req.params, req.body, (error, response) => {
-    // response = req.body
+
     if (error)
       return res
         .status(400)
